@@ -1,0 +1,102 @@
+
+(rules PCB Haply_EE
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (eu.mihosoft.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 156)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.8)
+      (against_preferred_direction_trace_costs 3.3)
+    )
+    (layer_rule In1.Cu
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
+    )
+    (layer_rule In2.Cu
+      (active off)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.5)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.8)
+      (against_preferred_direction_trace_costs 2.5)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-3]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-3]_800:400_um" "Via[0-3]_800:400_um" default
+  )
+  (via 
+    "Via[0-3]_800:400_um-kicad_default" "Via[0-3]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-3]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-3]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu In2.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    /3V3 GND VCC "Net-(D1-K)" /SCL /EN "/GPIO_0" "/CH_TX"
+    "/CH_RX" "unconnected-(MOD1-SHD{slash}SD2-Pad17)" "unconnected-(MOD1-SWP{slash}SD3-Pad18)" "unconnected-(MOD1-SCS{slash}CMD-Pad19)" "unconnected-(MOD1-SCK{slash}CLK-Pad20)" "unconnected-(MOD1-IO15-Pad23)" /RTS "unconnected-(MOD1-SENSOR_VP-Pad4)"
+    "unconnected-(MOD1-SENSOR_VN-Pad5)" "unconnected-(MOD1-IO34-Pad6)" "unconnected-(MOD1-IO35-Pad7)" "unconnected-(MOD1-IO32-Pad8)" "unconnected-(MOD1-IO33-Pad9)" "unconnected-(MOD1-IO25-Pad10)" "unconnected-(MOD1-IO26-Pad11)" "unconnected-(MOD1-IO27-Pad12)"
+    "unconnected-(MOD1-IO14-Pad13)" "unconnected-(MOD1-IO12-Pad14)" /DTR "unconnected-(MOD1-IO23-Pad37)" /SDA "Net-(U3-PROG)" "Net-(D2-K)" "Net-(U1-CAP)"
+    "unconnected-(MOD1-NC-Pad32)" "unconnected-(MOD1-IO19-Pad31)" "unconnected-(MOD1-IO18-Pad30)" "unconnected-(MOD1-IO5-Pad29)" "unconnected-(MOD1-IO17-Pad28)" "unconnected-(MOD1-IO16-Pad27)" "unconnected-(MOD1-IO4-Pad26)" "Net-(D2-A)"
+    "Net-(U5-V3)" "unconnected-(U1-PIN1-Pad1)" "unconnected-(U1-XIN32-Pad27)" "unconnected-(U1-XOUT32-Pad26)" "Net-(Q1-D)" "unconnected-(U1-PIN24-Pad24)" "unconnected-(U1-PIN23-Pad23)" "unconnected-(U1-PIN22-Pad22)"
+    "unconnected-(U1-PIN21-Pad21)" "/GPIO_2" "/GPIO_8" "unconnected-(U1-PIN7-Pad7)" "unconnected-(U1-PIN8-Pad8)" "/GPIO_7" "/GPIO_15" "Net-(SW1-Pad1)"
+    "unconnected-(U1-PIN12-Pad12)" "unconnected-(U1-PIN13-Pad13)" "unconnected-(U1-INT-Pad14)" "Net-(J2-CC1)" "unconnected-(J2-SBU1-PadA8)" "Net-(J2-CC2)" "unconnected-(J2-SBU2-PadB8)" "Net-(U5-UD+)"
+    "Net-(U5-UD-)" "unconnected-(U5-NC-Pad7)" "unconnected-(U5-NC-Pad8)" "unconnected-(U5-~{CTS}-Pad9)" "unconnected-(U5-~{DSR}-Pad10)" "unconnected-(U5-~{RI}-Pad11)" "unconnected-(U5-~{DCD}-Pad12)" "unconnected-(U5-R232-Pad15)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu In2.Cu B.Cu)
+    )
+  )
+)

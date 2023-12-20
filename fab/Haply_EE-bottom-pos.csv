@@ -1,0 +1,4 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"BAT1","BS-7","batPads",131.850000,-121.875000,180.000000,bottom
+"MOD1","ESP32-WROOM-32","ESP32-WROOM-32D",131.900000,-104.485000,180.000000,bottom
+"j3","~","connectorHaply",132.060000,-121.412000,180.000000,bottom

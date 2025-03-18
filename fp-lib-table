@@ -1,6 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "libs")(type "KiCad")(uri "${KIPRJMOD}/libs.pretty")(options "")(descr ""))
-  (lib (name "LibraryBat")(type "KiCad")(uri "${KIPRJMOD}/libs/LibraryBat.pretty")(options "")(descr ""))
-  (lib (name "connectorLib")(type "KiCad")(uri "${KIPRJMOD}/libs/connectorLib.pretty")(options "")(descr ""))
-)

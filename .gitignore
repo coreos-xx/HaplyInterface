@@ -37,9 +37,7 @@ production/
 *.dsn
 
 # Ignore KiCad-generated images (previews)
-*.png
-*.jpg
-*.bmp
+
 
 # Ignore log files
 *.log

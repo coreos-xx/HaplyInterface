@@ -1,0 +1,49 @@
+# Ignore auto-saved and temporary files
+#auto_saved_files#
+_autosave-*
+~*
+
+# Ignore KiCad backup and lock files
+*.lck
+*.bak
+*.kicad_prl
+*.kicad_pro
+
+# Ignore KiCad cache files
+fp-info-cache
+fp-lib-table
+sym-lib-table
+
+# Ignore KiCad PCB and Schematic backups
+Haply_EE-backups/
+Haply_EEbak-backups/
+*.zip
+
+# Ignore Gerber and Drill files (can be regenerated)
+fab/haply_grb/
+fab/*.csv
+fab/*.zip
+
+# Ignore production files (BOM, netlist, positions)
+production/
+*.csv
+*.ipc
+
+# Ignore KiCad session and rule files
+*.ses
+*.rules
+
+# Ignore KiCad DSN files (for PCB routing)
+*.dsn
+
+# Ignore KiCad-generated images (previews)
+*.png
+*.jpg
+*.bmp
+
+# Ignore log files
+*.log
+
+# Ignore generated 3D STEP files
+*.step
+
